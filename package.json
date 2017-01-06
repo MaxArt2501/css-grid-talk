@@ -1,0 +1,21 @@
+{
+  "name": "css-grid-talk",
+  "version": "1.0.0",
+  "description": "A talk about CSS grids",
+  "main": "index.js",
+  "author": "MaxArt2501",
+  "license": "MIT",
+  "dependencies": {
+    "reveal.js": "^3.3.0",
+    "typewriter": "^0.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-postcss": "^6.2.0",
+    "gulp-watch": "^4.3.11",
+    "postcss-advanced-variables": "^1.2.2",
+    "postcss-import": "^9.0.0",
+    "postcss-nested": "^1.0.0"
+  }
+}

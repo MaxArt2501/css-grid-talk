@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="it">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Stylus, preprocessore potente e flessibile</title>
+
+        <meta name="description" content="Griglie CSS: il futuro prossimo del layout">
+        <meta name="author" content="Massimo Artizzu">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/sky.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="css/zenburn.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-slide="cover"></section>
+                <section data-slide="table-layout"></section>
+                <section data-background-image="img/kill-it-with-fire.gif"></section>
+            </div>
+        </div>
+
+        <script src="js/reveal/head.min.js"></script>
+        <script src="js/reveal/reveal.js"></script>
+        <script src="js/typewriter-bundle-sa.js"></script>
+
+        <script>
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                center: true,
+                history: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'js/reveal/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'js/reveal/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'js/reveal/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'js/reveal/zoom.js', async: true },
+                    { src: 'js/reveal/notes.js', async: true }
+                ]
+            });
+        </script>
+    </body>
+</html>

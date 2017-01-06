@@ -1,0 +1,6 @@
+@import "vars";
+
+
+[data-slide="table-layout"] {
+    code { height: 10em; }
+}
