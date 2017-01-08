@@ -1,12 +1,13 @@
 const fs = require("fs");
 const gulp = require("gulp");
 const postcss = require("gulp-postcss");
+const concat = require("gulp-concat");
 const watch = require("gulp-watch");
 
 gulp.task("css", () => {
     const processors = [
-        require("postcss-nested"),
         require("postcss-import"),
+        require("postcss-nested"),
         require("postcss-advanced-variables")
     ];
 
@@ -17,14 +18,24 @@ gulp.task("css", () => {
 
 gulp.task("slides", () => {
     const html = fs.readFileSync("source/slides/index.html", "utf8");
-    const parsed = html.replace(/\sdata-slide=(['"])(.+?)\1\s*>/g, (m, quote, source) => {
-        const slide = fs.readFileSync(`source/slides/${source}.html`, "utf-8");
-        return ">" + slide;
+    const parsed = html.replace(/\sdata-slide=(['"])(.+?)\1[\s\S]*?>/g, (m, quote, source) => {
+        try {
+            const slide = fs.readFileSync(`source/slides/${source}.html`, "utf-8");
+            return m + slide;
+        } catch (e) {
+            return m;
+        }
     });
     fs.writeFileSync("public/index.html", parsed);
 });
 
-gulp.task("build", () => {
+gulp.task("js", () => {
+    gulp.src("source/scripts/**/*.js")
+        .pipe(concat("css-grid-talk.js"))
+        .pipe(gulp.dest("public/js"));
+});
+
+gulp.task("static", (css) => {
     gulp.src([
         "node_modules/reveal.js/css/reveal.css",
         "node_modules/reveal.js/css/theme/sky.css",
@@ -45,7 +56,7 @@ gulp.task("build", () => {
 });
 
 gulp.task("images", () => {
-    gulp.src("source/images/**/*.{jpg,jpeg,gif,png,webp}")
+    gulp.src("source/images/**/*.{jpg,jpeg,gif,png,webp,svg}")
         .pipe(gulp.dest("public/img"));
 });
 
@@ -54,7 +65,17 @@ gulp.task("watch-css", () => {
         gulp.start("css");
     });
 });
-
-gulp.task("watch", () => {
-    gulp.start("watch-css");
+gulp.task("watch-slides", () => {
+    watch("source/slides/**/*.html", () => {
+        gulp.start("slides");
+    });
 });
+gulp.task("watch-js", () => {
+    watch("source/scripts/**/*.js", () => {
+        gulp.start("js");
+    });
+});
+
+gulp.task("watch", [ "watch-css", "watch-slides", "watch-js" ]);
+
+gulp.task("default", [ "static", "css", "slides", "js" ]);
