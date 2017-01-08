@@ -1,6 +1,5 @@
 @import "vars";
-
-
-[data-slide="table-layout"] {
-    code { height: 10em; }
-}
+@import "override";
+@import "slides/holy-grail";
+@import "slides/just-do-it";
+@import "slides/table-layout";

@@ -1,0 +1,14 @@
+[data-slide="holy-grail"] {
+    img {
+        height: 30vh;
+        position: relative;
+    }
+
+    .fade-right {
+        left: 5%;
+    }
+    .fade-left {
+        left: -5%;
+        top: 12vh;
+    }
+}

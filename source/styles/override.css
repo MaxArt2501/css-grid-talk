@@ -1,0 +1,6 @@
+.reveal {
+    img { border-width: 2px; }
+    .slide-background {
+        background-size: contain;
+    }
+}
