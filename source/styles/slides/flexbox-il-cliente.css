@@ -1,0 +1,15 @@
+[data-slide="flexbox-il-cliente"] {
+    .fade-down {
+        height: 40vh;
+        display: block;
+        margin: 0 auto;
+
+        &.visible:not(.current-fragment) {
+            height: 20vh;
+            margin-bottom: -5vh;
+        }
+    }
+    .fade-right, .fade-left {
+        height: 30vh;
+    }
+}

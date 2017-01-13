@@ -1,0 +1,15 @@
+[data-slide="flexbox-ci-siamo"],
+[data-slide="flexbox-ci-risiamo"] {
+    img {
+        height: 25vh;
+        position: relative;
+    }
+
+    .fade-right {
+        left: 5%;
+    }
+    .fade-left {
+        left: -5%;
+        top: 12vh;
+    }
+}

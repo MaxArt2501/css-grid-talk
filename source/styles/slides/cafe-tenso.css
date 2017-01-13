@@ -1,0 +1,48 @@
+.slide-background.cafe-tenso.present::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../img/tenso-cafe.jpg") center/contain no-repeat;
+    animation: cafe-tenso 6s linear infinite;
+}
+@keyframes cafe-tenso {
+    0% {
+        opacity: 0;
+    }
+    34% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    41% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    51% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 1;
+    }
+    56% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

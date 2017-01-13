@@ -1,0 +1,10 @@
+[data-slide="flexbox-layout-1"] {
+    text-align: center;
+
+    .fade-right, .fade-left {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .fade-right { width: 55%; }
+    .fade-left { width: 40%; }
+}

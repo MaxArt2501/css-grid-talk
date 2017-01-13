@@ -1,0 +1,29 @@
+<pre><code>&lt;main class="container">
+  &lt;aside class="sidebar">&lt;/aside>
+  &lt;div class="main-wrapper">
+    &lt;nav class="main-nav">&lt;/nav>
+    &lt;section class="main-body">&lt;/section>
+  &lt;/div>
+&lt;/main></code></pre>
+    <pre><code>.container {
+  display: flex;
+}
+.sidebar {
+  flex-basis: 30%;
+  margin: 1rem;
+}
+.main-wrapper {
+  flex-basis: 70%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.main-nav {
+    flex-basis: 5rem;
+    margin: 1rem;
+}
+.main-body {
+    flex-grow: 1;
+    margin: 1rem;
+}
+</code></pre>

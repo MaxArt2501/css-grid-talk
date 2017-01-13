@@ -3,4 +3,21 @@
     .slide-background {
         background-size: contain;
     }
+
+    pre {
+        background: $pre-code-background;
+        padding: .5em;
+    }
+    code {
+        background: $code-background;
+        border-radius: $code-radius;
+        box-shadow: 0 .05em .1em black;
+        padding: .1em;
+        text-transform: none;
+    }
+    pre code {
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
 }
