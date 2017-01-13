@@ -23,6 +23,7 @@ gulp.task("slides", () => {
             const slide = fs.readFileSync(`source/slides/${source}.html`, "utf-8");
             return m + slide;
         } catch (e) {
+            console.error(`Slide non trovata: ${source}`);
             return m;
         }
     });
