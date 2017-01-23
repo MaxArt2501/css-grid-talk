@@ -1,0 +1,14 @@
+<h2>Più spazi "automatici"?</h2>
+<p class="fragment">E se volessimo suddividere lo spazio restante in più colonne,
+ma in maniera non equivalente?</p>
+<p class="fragment">Una nuova unità di misura: la "frazione" <code>fr</code>.</p>
+<pre class="fragment"><code>.main-grid {
+  display: grid;
+  grid-template-columns: 200px 3fr 1fr;
+}</code></pre>
+<!--p class="fragment">Una volta assegnate le dimensioni alle altre colonne, si suddivide
+lo spazio rimanente nel numero di "frazioni" totali, e lo si ripartisce nella misura
+indicata dalle rispettive suddivisioni.</p-->
+<p class="fragment">Ad esempio, se il contenitore è 1200 pixel, lo spazio rimanente è
+di <code>1000px</code>. Viene suddiviso in 3 + 1 = 4 parti, quindi la seconda colonna
+sarà <code>750px</code> e la terza <code>250px</code>.</p>
