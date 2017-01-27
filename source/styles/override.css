@@ -12,12 +12,15 @@
         background: $code-background;
         border-radius: $code-radius;
         box-shadow: 0 .05em .1em black;
+        display: inline-block;
         padding: .1em;
+        margin: .1em;
         text-transform: none;
     }
     pre code {
         background: none;
         box-shadow: none;
         padding: 0;
+        margin: 0;
     }
 }

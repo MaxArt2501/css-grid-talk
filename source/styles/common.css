@@ -1,3 +1,6 @@
+.two-columns { columns: 2; }
+.text-center { text-align: center; }
+
 ul.layered-picture {
     margin: 0;
     padding: 0;
