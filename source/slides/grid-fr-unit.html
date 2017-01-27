@@ -2,6 +2,7 @@
 <p class="fragment">E se volessimo suddividere lo spazio restante in più colonne,
 ma in maniera non equivalente?</p>
 <p class="fragment">Una nuova unità di misura: la "frazione" <code>fr</code>.</p>
+<!-- Non ha niente a che vedere con la Francia... -->
 <pre class="fragment"><code>.main-grid {
   display: grid;
   grid-template-columns: 200px 3fr 1fr;
@@ -12,3 +13,6 @@ indicata dalle rispettive suddivisioni.</p-->
 <p class="fragment">Ad esempio, se il contenitore è 1200 pixel, lo spazio rimanente è
 di <code>1000px</code>. Viene suddiviso in 3 + 1 = 4 parti, quindi la seconda colonna
 sarà <code>750px</code> e la terza <code>250px</code>.</p>
+<!-- auto si comporta come 1fr, ma se c'è una colonna/riga con misura in fr, allora va
+a 0. Morale: usiamo fr. -->
+<!-- fr avrebbe senso anche per flex-grow e flex-shrink -->
