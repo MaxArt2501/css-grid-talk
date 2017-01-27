@@ -1,0 +1,24 @@
+<h2>Ottimo! E ora?</h2>
+<p class="fragment">Dobbiamo definire <em>come</em> usare la griglia</p>
+<p class="two-columns text-center fragment">
+    <code>grid-column-start</code><br>
+    <code>grid-column-end</code><br>
+    <code>grid-row-start</code><br>
+    <code>grid-row-end</code>
+</p>
+<p class="fragment">Possono assumere valori numerici:</p>
+<pre class="fragment two-columns"><code>.my-block {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}</code><code class="fragment">.my-block {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+}</code></pre>
+<!-- span ha senso su end, ma si può dare anche a start (e vince su end) per indicare
+le colonne/righe di distanza da end -->
+<p class="fragment">I valori possono essere <em>negativi</em> (partono dal fondo)</p>
+<!-- L'ordinamento delle celle discende dalla libertà di posizionamento -->

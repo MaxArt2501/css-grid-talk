@@ -1,0 +1,29 @@
+<div class="fragment fade-right" data-fragment-index="1">
+    <pre><code>&lt;div class="my-grid">
+  &lt;header class="main-header">&lt;/header>
+  &lt;aside class="main-sidebar">&lt;/aside>
+  &lt;main class="page-content">&lt;/main>
+  &lt;section class="related-box">&lt;/section>
+  &lt;aside class="served-ad">&lt;/aside>
+  &lt;footer class="main-footer">&lt;/footer>
+&lt;/div></code></pre>
+    <pre><code>@media (max-width: 480px) {
+  .my-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "header header"
+                      "contenuto contenuto"
+                      "suggeriti ad"
+                      "footer    footer";
+  }</code><!--
+    I più accorti avranno notato che manca sidebar...
+--><code class="fragment" data-fragment-index="2">
+  .main-sidebar {
+    grid-area: auto;
+    position: fixed;
+    height: 100vh;
+    transform: translateX(-100vw);
+  }
+}</code></pre>
+<!-- Non posso chiamare un'area "auto" -->
+</div>
+<img src="img/grid-3-alt.png" class="fragment fade-left" data-fragment-index="0"/>

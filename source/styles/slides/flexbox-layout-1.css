@@ -1,4 +1,5 @@
-[data-slide="flexbox-layout-1"] {
+[data-slide="flexbox-layout-1"],
+[data-slide="grid-responsive"] {
     text-align: center;
 
     .fade-right, .fade-left {

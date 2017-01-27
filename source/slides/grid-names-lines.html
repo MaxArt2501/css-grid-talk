@@ -1,0 +1,16 @@
+<h2>Linee con nomi</h2>
+<pre><code class="fragment" data-fragment-index="0">.my-grid {
+    grid-template-columns: 150px [pippo] 350px [franco] 200px 100px [ivo];
+    grid-template-rows: 100px [rita] 200px [germana] 100px [rita];
+}</code><div class="two-columns"><code class="fragment" data-fragment-index="1">.my-block {
+    grid-column: pippo / ivo;
+    grid-row: rita / span 2;
+}</code><code class="fragment" data-fragment-index="2">.my-block {
+    grid-column: 2 / franco;
+    grid-row: 1 / span 2 rita;
+}</code></div></pre>
+<ul class="layered-picture">
+    <li class="fragment" data-fragment-index="0"><img src="img/grid-named-lines.png"/></li>
+    <li class="fragment" data-fragment-index="1"><img src="img/grid-named-block-1.png"/></li>
+    <li class="fragment" data-fragment-index="2"><img src="img/grid-named-block-2.png"/></li>
+</ul>

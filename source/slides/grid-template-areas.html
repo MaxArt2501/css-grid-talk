@@ -1,0 +1,19 @@
+<ul class="layered-picture">
+    <li><img src="img/grid-1-alt.png"></li>
+    <li><img src="img/grid-2-alt.png" class="fragment"></li>
+</ul>
+<!-- Un modo sorprendentemente semplice di raggiungere lo scopo -->
+<pre class="fragment"><code>.my-grid {
+    grid-template-areas: "sidebar header    header"
+                         "sidebar contenuto contenuto"
+                         "sidebar suggeriti ad"
+                         "footer  footer    ad";
+}</code><!--
+    Abbiamo dato un nome alle nostre porzioni di griglia, in maniera immediata,
+    intuitiva, quasi grafica. E ora possiamo usarle!
+--><code class="fragment two-columns">.main-sidebar { grid-area: sidebar; }
+.main-header  { grid-area: header; }
+.page-content { grid-area: contenuto; }
+.related-box { grid-area: suggeriti; }
+.main-footer { grid-area: footer; }
+.served-ad   { grid-area: ad; }</code></pre>
