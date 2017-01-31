@@ -1,0 +1,9 @@
+[data-slide="grid-in-production"] {
+    ul > li > img {
+        border: 0;
+        background: none;
+        height: 1.4em;
+        box-shadow: none;
+        vertical-align: middle;
+    }
+}

@@ -21,3 +21,11 @@ ul.layered-picture {
         max-height: none;
     }
 }
+ul.layered-content {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > .fragment { display: none; }
+    > .fragment.current-fragment { display: block; }
+}
