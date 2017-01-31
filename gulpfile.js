@@ -76,7 +76,12 @@ gulp.task("watch-js", () => {
         gulp.start("js");
     });
 });
+gulp.task("watch-images", () => {
+    watch("source/images/**/*.{jpg,jpeg,gif,png,webp,svg}", () => {
+        gulp.start("images");
+    });
+});
 
-gulp.task("watch", [ "watch-css", "watch-slides", "watch-js" ]);
+gulp.task("watch", [ "watch-css", "watch-slides", "watch-js", "watch-images" ]);
 
 gulp.task("default", [ "static", "css", "slides", "js" ]);
