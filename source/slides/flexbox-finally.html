@@ -1,6 +1,25 @@
-<h2>Un nuovo eroe in città</h2>
-<p class="fragment">Tutto ciò sino all'arrivo di&hellip;</p>
-<h1 class="fragment"><code>display: flex;</code></h1>
-<p class="fragment">&hellip; che prima era <code>display: flexbox;</code></p>
-<p class="fragment">&hellip; e prima ancora <code>display: box;</code></p>
-<!-- contest per sapere in quale caso viene ancora usata la prima sintassi? -->
+<section>
+    <h2>Un nuovo eroe in città</h2>
+    <p class="fragment">Tutto ciò sino all'arrivo di&hellip;</p>
+    <h1 class="fragment"><code>display: flex;</code></h1>
+    <p class="fragment">&hellip; che prima era <code>display: flexbox;</code></p>
+    <p class="fragment">&hellip; e prima ancora <code>display: box;</code></p>
+    <!-- contest per sapere in quale caso viene ancora usata la prima sintassi? -->
+</section>
+<section>
+    <h2>Ellissi multiriga</h2>
+    <pre class="fragment"><code>.multiline-lorem {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}</code></pre>
+    <div class="multiline-lorem fragment">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+    <!-- Ricordiamoci che è legacy, non si può essere sicuri che non si romperà prima
+    o poi. Già adesso sbarella se si mettono un po' di padding verticali (provare).
+    Forse c'è anche stato un FOUC -->
+</section>
