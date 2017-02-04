@@ -49,7 +49,8 @@ gulp.task("static", (css) => {
         "node_modules/reveal.js/plugin/markdown/markdown.js",
         "node_modules/reveal.js/plugin/highlight/highlight.js",
         "node_modules/reveal.js/plugin/zoom-js/zoom.js",
-        "node_modules/reveal.js/plugin/notes/notes.js"
+        "node_modules/reveal.js/plugin/notes/notes.js",
+        "node_modules/reveal.js/plugin/notes/notes.html"
     ]).pipe(gulp.dest("public/js/reveal"));
     gulp.src([
         "node_modules/typewriter/build/typewriter-bundle-sa.js"

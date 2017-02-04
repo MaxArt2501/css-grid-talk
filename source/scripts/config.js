@@ -1,3 +1,20 @@
+(() => {
+    const tw = document.createTreeWalker(document.querySelector(".slides"), NodeFilter.SHOW_COMMENT, null, null);
+    let comment;
+    while (comment = tw.nextNode()) {
+        const slide = comment.parentNode.closest("section");
+        if (!slide) continue;
+        let aside = slide.querySelector("aside.notes");
+        if (!aside) {
+            aside = document.createElement("aside");
+            aside.className = "notes";
+            aside.innerHTML = "<ul></ul>";
+            slide.appendChild(aside);
+        }
+        aside.firstChild.insertAdjacentHTML("beforeEnd", `<li>${comment.nodeValue}</li>`);
+    }
+})();
+
 // Full list of configuration options available at:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
