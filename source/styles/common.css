@@ -29,3 +29,12 @@ ul.layered-content {
     > .fragment { display: none; }
     > .fragment.current-fragment { display: block; }
 }
+
+.flex-h {
+    display: flex;
+    flex-direction: row;
+}
+.flex-v {
+    display: flex;
+    flex-direction: column;
+}

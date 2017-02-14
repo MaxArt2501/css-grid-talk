@@ -1,3 +1,5 @@
 $pre-code-background: #3f3f3f;
 $code-background: white;
 $code-radius: .1em;
+
+$basic-shadow: 0 .25em .5em rgba(0, 0, 0, .35);

@@ -9,6 +9,6 @@
         width: 20em;
         margin: 0 auto;
         text-align: left;
-        box-shadow: 0 .25em .5em rgba(0, 0, 0, .35);
+        box-shadow: $basic-shadow;
     }
 }

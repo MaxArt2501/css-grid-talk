@@ -1,6 +1,6 @@
 .reveal {
     img { border-width: 2px; }
-    .slide-background {
+    .slide-background:not(.cover) {
         background-size: contain;
     }
 
