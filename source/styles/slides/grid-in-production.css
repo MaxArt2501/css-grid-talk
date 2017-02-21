@@ -1,4 +1,5 @@
-[data-slide="grid-in-production"] {
+[data-slide="grid-in-production"],
+[data-slide="grid-devtools"] {
     ul > li > img {
         border: 0;
         background: none;

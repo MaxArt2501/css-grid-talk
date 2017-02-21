@@ -19,6 +19,10 @@ ul.layered-picture {
         height: 100%;
         max-width: none;
         max-height: none;
+
+        &.visible:not(.current-fragment) {
+            opacity: 0;
+        }
     }
 }
 ul.layered-content {
@@ -30,11 +34,11 @@ ul.layered-content {
     > .fragment.current-fragment { display: block; }
 }
 
-.flex-h {
+.flex-h.flex-h {
     display: flex;
     flex-direction: row;
 }
-.flex-v {
+.flex-v.flex-v {
     display: flex;
     flex-direction: column;
 }

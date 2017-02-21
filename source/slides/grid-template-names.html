@@ -1,10 +1,9 @@
 <h2>Dalle aree alle guide</h2>
 <p>Le aree con nome generano in automatico dei nomi per le guide:</p>
-<pre class="fragment"><code class="two-columns">.my-grid {
+<pre class="fragment flex-h"><code style="flex-grow: 1">.my-grid {
     grid-template-areas:
         "sidebar main";
-}
-.my-block {
+}</code><code>.my-block {
     grid-column: sidebar-start / main-end;
     grid-row: main-start / sidebar-end;
 }</code></pre>

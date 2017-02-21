@@ -1,0 +1,13 @@
+[data-slide="grid-mario"] {
+    img.fragment {
+        position: absolute;
+        border: none;
+        background: none;
+        box-shadow: none;
+        top: 0;
+        right: 0;
+        margin: 0;
+        height: 100%;
+        max-height: none;
+    }
+}
