@@ -1,6 +1,7 @@
 @import "vars";
 @import "override";
 @import "common";
+@import "slides/chi-sono";
 @import "slides/holy-grail";
 @import "slides/just-do-it";
 @import "slides/table-layout";
