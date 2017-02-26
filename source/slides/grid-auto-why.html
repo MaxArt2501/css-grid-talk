@@ -1,0 +1,17 @@
+<h2>Perché <code>grid-auto-flow</code>?</h2>
+<!-- Perché insomma dovremmo avere una disposizione automatica delle celle? -->
+<p class="fragment">Il meglio si ottiene quando <em>non si sa</em> quante celle ci sono</p>
+<p class="fragment"><code>grid-auto-row</code> e <code>grid-auto-columns</code></p>
+<pre class="fragment two-columns"><code>.infinite-cards {
+    grid-auto-flow: row;
+    grid-auto-rows: 20vw;
+}</code><code class="fragment">.card {
+    /* &#x1f44d; */
+}</code></pre>
+<p class="fragment"><code>repeat</code> e <code>auto-fill</code></p>
+<pre class="fragment two-columns"><code>.product-container {
+    grid-template-columns:
+        repeat(auto-fill, 300px);
+}</code><code class="fragment">.product {
+    /* &#x1f44d; */
+}</code></pre>
