@@ -1,26 +1,48 @@
 <h2>Dicevamo di IE&hellip;</h2>
 <!-- Perché, mentre Edge prima o poi sarà aggiornato, per IE la partita è conclusa -->
-<p class="fragment">Le specifiche del 2011 sono molto più semplici.</p>
-<ul>
-    <li class="fragment">
-        <code>grid-template-rows</code>/<code>columns</code><br>
-        &#x21d2;<code>-ms-grid-rows</code>/<code>columns</code>
-    </li>
-    <li class="fragment">
-        <code>grid-row</code>/<code>column-start</code><br>
-        &#x21d2;<code>-ms-grid-row</code>/<code>column</code>
-    </li>
-    <li class="fragment">
-        <code>grid-row</code>/<code>column-end</code><br>
-        &#x21d2;<code>-ms-grid-row</code>/<code>column-span</code>
-        <span class="fragment">(circa)</span>
-    </li>
-    <li class="fragment">
-        <code>align</code>/<code>justify-self</code><br>
-        &#x21d2;<code>-ms-grid-row</code>/<code>column-align</code>
-    </li>
-</ul>
-<!-- E basta... il resto non c'è. -->
-<!-- La cosa "buona" è che hanno tutte il vendor prefix. E sì, Autoprefixer può
-operare con le suddette proprietà... Ma non altre -->
-<!-- Per provare https://autoprefixer.github.io/ -->
+<div class="flex-h">
+    <aside style="flex-grow: 1;">
+        <h4>
+            <img class="simple-image" src="img/chrome.png" alt="Google Chrome"> /
+            <img class="simple-image" src="img/firefox.png" alt="Mozilla Firefox">
+        </h4>
+        <pre class="fragment"
+            data-fragment-index="0"><code>.my-grid {</code><code class="fragment"
+            data-fragment-index="1">  display: grid;</code><code class="fragment"
+            data-fragment-index="2">  grid-template-columns: 20em 3fr 1fr;
+  grid-template-rows: 64px auto 128px;</code><code class="fragment"
+  data-fragment-index="0">}</code><code class="fragment"
+  data-fragment-index="3">.header {</code><code class="fragment"
+  data-fragment-index="4">  grid-column-start: 1;</code><code class="fragment"
+  data-fragment-index="5">  grid-column-end: span 3;</code><code class="fragment"
+  data-fragment-index="3">}</code><code class="fragment"
+  data-fragment-index="6">.sidebar {</code><code class="fragment"
+  data-fragment-index="7">  grid-row-start: 2;</code><code class="fragment"
+  data-fragment-index="8">  justify-self: end;</code><code class="fragment"
+  data-fragment-index="9">  align-self: stretch;</code><code class="fragment"
+  data-fragment-index="6">}</code></pre>
+    </aside>
+    <aside style="flex-grow: 1;">
+        <h4>
+            <img class="simple-image" src="img/ie.png" alt="Internet Explorer"> /
+            <img class="simple-image" src="img/edge.png" alt="Microsoft Edge">
+        </h4>
+        <pre class="fragment"
+            data-fragment-index="0"><code>.my-grid {</code><code class="fragment"
+            data-fragment-index="1">  display: -ms-grid;</code><code class="fragment"
+            data-fragment-index="2"code>  -ms-grid-columns: 20em 3fr 1fr;
+  -ms-grid-rows: 64px auto 128px;</code><code class="fragment"
+  data-fragment-index="0">}</code><code class="fragment"
+  data-fragment-index="3">.header {</code><code class="fragment"
+  data-fragment-index="4">  -ms-grid-column: 1;</code><code class="fragment"
+  data-fragment-index="5">  -ms-grid-column-span: 3;</code><code class="fragment"
+  data-fragment-index="3">}</code><code class="fragment"
+  data-fragment-index="6">.sidebar {</code><code class="fragment"
+  data-fragment-index="7">  -ms-grid-row: 2;</code><code class="fragment"
+  data-fragment-index="8">  -ms-grid-column-align: end;</code><code class="fragment"
+  data-fragment-index="9">  -ms-grid-row-align: stretch;</code><code class="fragment"
+  data-fragment-index="6">}</code></pre>
+    </aside>
+</div>
+<!-- E basta... il resto non c'è. Vista così sembra che si possa sopravvivere -->
+<!-- La cosa "buona" è che hanno tutte il vendor prefix. -->

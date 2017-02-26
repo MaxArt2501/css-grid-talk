@@ -1,28 +1,10 @@
-<pre class="two-columns"><code>.my-grid {
-  display: grid;
-  grid-template-columns: 20% 1fr 20em;
-  grid-template-rows: 10vh 1fr 120px;
-}</code><code class="fragment">.my-block {
-  grid-column-start: 2;
-  grid-column-end: span 3;
-  grid-row-start: 1;
-  grid-row-end: span 2;
-}</code><code class="fragment">.my-grid {
-  display: -ms-grid;
-  -ms-grid-columns: 20% 1fr 20em;
-  -ms-grid-rows: 10vh 1fr 120px;
-}</code><code class="fragment">.my-block {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-}</code></pre>
-<!-- Vista così sembra che si possa sopravvivere -->
+<h2>Con IE/Edge</h2>
 <ul>
     <li class="fragment">Non si possono dare nomi alle guide;</li>
     <li class="fragment">bisogna posizionare <em>ogni</em> cella;</li>
     <li class="fragment">per i gutter si usa <code>margin</code> o tracce vuote;</li>
-    <!-- margin oppure tracce vuote -->
     <li class="fragment">l'allineamento c'è solo per le singole celle.</li>
 </ul>
 <p class="fragment">Se questo è accettabile, dateci dentro &#x1f44d;</p>
+<!-- E sì, Autoprefixer può operare con le proprietà supportate... Ma non altre -->
+<p class="fragment"><a href="https://autoprefixer.github.io/">autoprefixer.github.io</a></p>

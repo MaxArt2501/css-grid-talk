@@ -16,13 +16,12 @@
                       "footer    footer";
   }</code><!--
     I più accorti avranno notato che manca sidebar...
---><code class="fragment" data-fragment-index="3">
-  .main-sidebar {
-    grid-area: auto;
+--><code class="fragment" data-fragment-index="3">  .main-sidebar {
+    grid-area: initial;
     position: fixed;
     height: 100vh;
     transform: translateX(-100vw);
   }</code><code class="fragment" data-fragment-index="2">}</code></pre>
-<!-- Non posso chiamare un'area "auto" -->
+<!-- Non posso chiamare un'area "initial", "inherit" o "auto" -->
 </div>
 <img src="img/grid-3-alt.png" class="fragment fade-left" data-fragment-index="0"/>

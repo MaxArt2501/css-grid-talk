@@ -1,4 +1,13 @@
 .reveal {
+    &::after {
+        position: fixed;
+        top: 1em;
+        right: 1em;
+        height: 5vh;
+        width: 100vw;
+        background: url("../img/cssday.svg") 100%/contain no-repeat;
+        opacity: .5;
+    }
     img { border-width: 2px; }
     .slide-background:not(.cover) {
         background-size: contain;

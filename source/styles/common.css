@@ -1,6 +1,14 @@
 .two-columns { columns: 2; }
 .text-center { text-align: center; }
 
+.simple-image.simple-image {
+    border: 0;
+    background: none;
+    box-shadow: none;
+    vertical-align: middle;
+    margin: 0;
+}
+
 ul.layered-picture {
     margin: 0;
     padding: 0;
