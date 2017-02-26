@@ -1,0 +1,19 @@
+<div class="flex-h" style="align-items: center;">
+    <img src="img/harryhoudini.jpg" style="height: 50vh; order: 2;" class="fragment fade-left"/>
+    <aside style="flex-grow: 1;">
+        <h3 class="fragment fade-right">Houdini</h3>
+        <pre class="fragment fade-right"><code>class MasonryLayout extends Layout {
+  layout(constraintSpace, children, styleMap) {
+    // ...
+  }
+}
+registerLayout("masonry", MasonryLayout);</code></pre>
+<pre class="fragment fade-right"><code>CSS.layoutWorklet
+  .import("layout/masonry.js").then(() => {
+    console.log("Posso usare masonry!");
+  });</code></pre>
+        <pre class="fragment fade-right"><code>.masonry-container {
+    display: layout(masonry);
+}</code></pre>
+    </aside>
+</div>
