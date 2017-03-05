@@ -50,3 +50,8 @@ ul.layered-content {
     display: flex;
     flex-direction: column;
 }
+
+@keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
