@@ -33,3 +33,8 @@
         margin: 0;
     }
 }
+
+body {
+    background-color: #add9e4;
+    background-image: url("../img/background.svg"), radial-gradient(circle closest-corner, #f7fbfc 0%, #add9e4 100%)
+}
