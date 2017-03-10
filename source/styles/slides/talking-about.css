@@ -4,13 +4,11 @@
         position: relative;
         z-index: 10;
     }
-    .appearing {
+    .fragment {
         position: absolute;;
         transform: translate(-50%, -50%);
         width: 30vw;
         margin: 0 !important;
-        animation: appear .2s forward;
-        opacity: 0;
 
         &:nth-of-type(1) {
             top: 50%;
