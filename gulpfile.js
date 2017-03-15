@@ -55,6 +55,9 @@ gulp.task("static", (css) => {
     gulp.src([
         "node_modules/typewriter/build/typewriter-bundle-sa.js"
     ]).pipe(gulp.dest("public/js"));
+    gulp.src([
+        "source/fonts/*"
+    ]).pipe(gulp.dest("public/fonts"));
 });
 
 gulp.task("images", () => {

@@ -1,6 +1,7 @@
 @import "vars";
 @import "override";
 @import "common";
+@import "fonts";
 @import "slides/chi-sono";
 @import "slides/talking-about";
 @import "slides/holy-grail";
