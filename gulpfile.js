@@ -2,6 +2,7 @@ const fs = require("fs");
 const gulp = require("gulp");
 const postcss = require("gulp-postcss");
 const concat = require("gulp-concat");
+const replace = require("gulp-replace");
 const watch = require("gulp-watch");
 
 gulp.task("css", () => {
@@ -27,6 +28,7 @@ gulp.task("slides", () => {
             return m;
         }
     });
+    if (!fs.existsSync("public")) fs.mkdirSync("public");
     fs.writeFileSync("public/index.html", parsed);
 });
 
@@ -36,7 +38,7 @@ gulp.task("js", () => {
         .pipe(gulp.dest("public/js"));
 });
 
-gulp.task("static", (css) => {
+gulp.task("static", () => {
     gulp.src([
         "node_modules/reveal.js/css/reveal.css",
         "node_modules/reveal.js/css/theme/sky.css",
@@ -50,8 +52,10 @@ gulp.task("static", (css) => {
         "node_modules/reveal.js/plugin/highlight/highlight.js",
         "node_modules/reveal.js/plugin/zoom-js/zoom.js",
         "node_modules/reveal.js/plugin/notes/notes.js",
-        "node_modules/reveal.js/plugin/notes/notes.html"
     ]).pipe(gulp.dest("public/js/reveal"));
+    gulp.src("node_modules/reveal.js/plugin/notes/notes.html")
+        .pipe(replace("../../plugin/markdown/marked.js", "./marked.js"))
+        .pipe(gulp.dest("public/js/reveal"));
     gulp.src([
         "node_modules/typewriter/build/typewriter-bundle-sa.js"
     ]).pipe(gulp.dest("public/js"));
@@ -85,4 +89,4 @@ gulp.task("watch-images", () => {
 
 gulp.task("watch", [ "watch-css", "watch-slides", "watch-js", "watch-images" ]);
 
-gulp.task("default", [ "static", "css", "slides", "js" ]);
+gulp.task("default", [ "static", "css", "slides", "js", "images" ]);
